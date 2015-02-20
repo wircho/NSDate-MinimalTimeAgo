@@ -10,6 +10,6 @@
 
 @interface NSDate (MinimalTimeAgo)
 
-- (NSString*)timeAgo;
+- (NSString*)minimalTimeAgo;
 
 @end

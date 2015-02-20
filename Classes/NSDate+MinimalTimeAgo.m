@@ -17,7 +17,7 @@ static int const WEEK = (DAY * 7);
 static int const MONTH = (DAY * 31);
 static int const YEAR = (DAY * 365);
 
-- (NSString*)timeAgo {
+- (NSString*)minimalTimeAgo {
     
     NSDate *now = [NSDate date];
     NSInteger secondsSinceNow = (NSInteger)[now timeIntervalSinceDate:self];
@@ -61,7 +61,7 @@ static int const YEAR = (DAY * 365);
         suffix = @"y";
     }
 
-    return [NSString stringWithFormat:@"%d%@", prefix, suffix];
+    return [NSString stringWithFormat:@"%ld%@", (long)prefix, suffix];
 }
 
 @end
